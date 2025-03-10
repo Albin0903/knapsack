@@ -18,9 +18,7 @@ def lire_fichier(fichier):
     return max_capacity, liste_items
 
 def solve_knapsack_cp_sat(fichier):
-    """
-    Résout un problème de sac à dos 0-1 via OR-Tools CP-SAT.
-    """
+   
     # 1) Lecture des données
     max_capacity, liste_items = lire_fichier(fichier)
     n = len(liste_items)
@@ -69,5 +67,5 @@ def solve_knapsack_cp_sat(fichier):
 
 if __name__ == "__main__":
     # Exemple : fichier .kna ou .txt au format attendu
-    fichier_test = "pi-12-10000-1000-001.kna"
+    fichier_test = "pi-15-10000-1000-001.kna"
     solve_knapsack_cp_sat(fichier_test)
