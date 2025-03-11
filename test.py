@@ -70,12 +70,8 @@ def recuit_simule(liste_items, max_capacity, max_iter, temperature_initiale, alp
                 meilleur_solution = solution[:]
     return meilleur_solution
 
-
-def algo_genetique(liste_items, max_capacity, nb_generations, proba_mutation, taille_population):
-    pass
-
 def main():
-    max_capacity, liste_items = lire_fichier('pi-12-1000-1000-001.kna') # fichier à lire
+    max_capacity, liste_items = lire_fichier('pi-12-100-1000-001.kna') # fichier à lire
     # pi-12-100-1000-001.kna
     # pi-12-1000-1000-001.kna
     # pi-12-10000-1000-001.kna
