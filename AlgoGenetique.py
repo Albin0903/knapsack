@@ -82,6 +82,8 @@ def mutation_flip(child, prob_mut=0.01):
             child[i] = 1 - child[i]
     return child
 
+
+
 def algogen_knapsack(liste_items, max_capacity,
                      pop_size=50,
                      max_gen=100,
@@ -138,7 +140,7 @@ def algogen_knapsack(liste_items, max_capacity,
             # --- c) Mutation ---
             child1 = mutation_flip(child1, pmut)
             child2 = mutation_flip(child2, pmut)
-
+            
             # On ajoute les enfants à la nouvelle population
             new_population.append(child1)
             if len(new_population) < pop_size:  # évite de dépasser pop_size
@@ -181,6 +183,8 @@ if __name__ == '__main__':
     profit_total = sum(liste_items[i][1] for i, bit in enumerate(best_sol) if bit == 1)
     print("Poids total:", poids_total, "/", max_capacity)
     print("Profit total:", profit_total)
+    print("Poids total de la meilleure solution :", calculer_poids_total(liste_items, best_sol), "/", max_capacity)
+
 
     # IDs des items sélectionnés
     selected_ids = [liste_items[i][0] for i, bit in enumerate(best_sol) if bit == 1]
